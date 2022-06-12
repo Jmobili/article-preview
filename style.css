@@ -1,0 +1,289 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--grayish-blue);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.furniture-card{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: var(--light-grayish-blue);
+  width: 325px;
+  height: 505px;
+  margin:auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.furniture-content{
+  display: flex;
+  flex-direction: column;
+  height: 305px;
+
+}
+
+.drawers-container{
+  display: flex;
+  height: 200px;
+  width: 325px;
+}
+
+.drawers{
+  max-width: 100%;
+  width: 325px;
+  object-fit: cover;
+  object-position: 0 25%;
+  border-radius: 10px 10px 0 0;
+}
+
+.main-text{
+  padding: 40px 34px 0px;
+}
+
+.furniture-card h1{
+  color: var(--dark-grayish-blue);
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.furniture-card p{
+  color: var(--dark-blue);
+  margin: 15px 0;
+}
+
+.article-info{
+  display: flex;
+  width: 325px;
+  height: 100%;
+
+}
+
+.creation-info{
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+
+.avatar{
+  margin: 0 20px 0px 34px;
+}
+
+.creator-info span{
+  line-height: 20px;
+}
+
+.creator{
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+}
+
+.date {
+  color: var(--grayish-blue);
+}
+
+
+.avatar-img{
+  width: 40px;
+  border-radius: 100%;
+}
+
+.share{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 34px;
+}
+
+.img-container{
+  display: flex;
+  background: hsl(210, 46%, 90%);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  justify-content: center;
+}
+
+.img-container img{
+  width: 17px;
+  object-fit: contain;
+}
+
+.share-active{
+  opacity: 0;
+  position: absolute;  
+  bottom: 0px;
+  display: flex;
+  z-index: 10;
+  width: 325px;
+  box-sizing: border-box;
+  background: var(--dark-grayish-blue);
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  padding: 0 34px;
+  transition: opacity 0.4s;
+
+}
+
+.share-active-container{
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.share-active h2{
+  font-size: 13px;
+  color: var(--dark-blue);
+  letter-spacing: 5px;
+  
+}
+
+.img-container-active{
+  display: flex;
+  background: var(--dark-blue);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  justify-content: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.img-container-active img{
+  width: 17px;
+  object-fit: contain;
+
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  height: 100%;  
+  cursor: pointer;
+}
+
+.icon {
+  margin: 7px;
+  width: 20px;
+  height: 20px;
+}
+
+.twitter-container img{
+  margin-top: 2px;
+}
+
+@media screen and (min-width: 950px) {
+
+  .furniture-card{
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    height: 300px;
+  }
+
+  .drawers-container{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .drawers{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .furniture-card h1{
+    font-size: 20px;
+  }
+
+  .furniture-card p{
+    margin-bottom: 0;
+  }
+
+  .article-info{
+    width: 100%;
+    margin-top: -10px;
+    box-sizing: border-box;
+    padding-right: 15px;
+  }
+
+  .attribution{
+    font-size: 15px;
+  }
+
+  .share-active-container{
+    position: absolute;
+    background: var(--dark-grayish-blue);
+    z-index: 15;
+    left: 562px;
+    bottom: 110px;
+    opacity: 0;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    padding:28px;
+    justify-content: center;
+    transition: opacity 0.4s;
+    
+  }
+
+  .text-globe-triangle{
+    position: absolute;
+    background: var(--dark-grayish-blue);
+    margin-top: 85px;
+    margin-right: 10px;
+    padding:20px;
+    clip-path: polygon(0 0, 50% 50%, 100% 0);
+    background: var(--dark-grayish-blue);
+    transition: opacity 0.4s;
+
+  }
+
+  
+
+  .share-active h2 {
+    margin: 5px;
+  }
+
+  .img-container-active{
+    opacity: 0;
+    position: absolute;
+    background-color: var(--dark-grayish-blue);
+    bottom: 39px;
+    left: 666px;
+  }
+
+  .img-container-active:hover{
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
+
+  
+  
+
+}
+
+.opacity{
+  opacity: 1;
+}
